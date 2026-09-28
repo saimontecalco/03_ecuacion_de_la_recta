@@ -23,15 +23,7 @@ from logica_recta import (
     generar_tabla_valores,
     validar_puntos,
 )
-
-
-def crear_grafica(
-    puntos: pd.DataFrame,
-    tabla_valores: pd.DataFrame,
-    pendiente: float,
-    ordenada: float,
-) -> plt.Figure:
-    """Construye la figura con los puntos, la recta y los valores predichos.
+"""Construye la figura con los puntos, la recta y los valores predichos.
 
     Args:
         puntos: DataFrame con los puntos P1 y P2.
@@ -41,7 +33,14 @@ def crear_grafica(
 
     Returns:
         Figura de Matplotlib lista para mostrarse en Streamlit.
-    """
+"""
+def crear_grafica(
+    puntos: pd.DataFrame,
+    tabla_valores: pd.DataFrame,
+    pendiente: float,
+    ordenada: float,
+) -> plt.Figure:
+
     x_min = puntos["x"].min()
     x_max = tabla_valores["x"].max()
     x_recta = np.linspace(x_min, x_max, 200)
@@ -87,14 +86,14 @@ def crear_grafica(
     figura.tight_layout()
     return figura
 
-
+"Carga un archivo **.csv** con las columnas `x` e `y` y "
+"exactamente dos puntos: P1 y P2."
 def main() -> None:
     """Define la interfaz de Streamlit y coordina la lógica numérica."""
     st.set_page_config(page_title="Ajuste de recta", page_icon="📈")
     st.title("📈 Ajuste de recta y predicción")
     st.write(
-        "Carga un archivo **.csv** con las columnas `x` e `y` y "
-        "exactamente dos puntos: P1 y P2."
+
     )
 
     archivo = st.file_uploader("Archivo .csv", type="csv")
