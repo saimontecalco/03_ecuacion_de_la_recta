@@ -6,6 +6,7 @@ Alumno: [Saimon Josue Tecalco Martinez]
 Matrícula: [2403230384]
 Fecha: [27/09/2026]
 
+
 Este módulo no depende de Streamlit: contiene la validación de
 datos, el cálculo de la pendiente y la ordenada al origen, y la generación
 de la tabla de interpolación y predicción.

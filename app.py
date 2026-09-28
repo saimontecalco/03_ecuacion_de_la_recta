@@ -6,6 +6,8 @@ Alumno: [Saimon Josue Tecalco Martinez]
 Matrícula: [2403230384]
 Fecha: [27/09/2026]
 
+hola profe soy juan
+
 Ejecución:
     streamlit run app.py
 """
